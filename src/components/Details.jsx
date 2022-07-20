@@ -22,7 +22,7 @@ export const Details = () => {
     "https://assets.interntheory.com/creative/home-logo/logo-17.png",
     "https://assets.interntheory.com/creative/home-logo/logo-18.png",
     "https://assets.interntheory.com/creative/home-logo/logo-19.png",
-    "https://assets.interntheory.com/creative/home-logo/logo-13.png",
+    "https://assets.interntheory.com/creative/home-logo/logo-20.png",
   ];
   return (
     <Box display="flex">
@@ -52,7 +52,7 @@ export const Details = () => {
       <Box width="40%" height="auto">
         <Grid templateColumns="repeat(4, 1fr)">
           {links.map((el) => (
-            <GridItem width="150px" height="75px">
+            <GridItem key={el} width="150px" height="75px">
               <Image src={el} alt="img" />
             </GridItem>
           ))}

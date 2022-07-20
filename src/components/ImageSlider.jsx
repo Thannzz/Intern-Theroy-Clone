@@ -39,11 +39,12 @@ const ImageSlider = () => {
     },
   ];
   return (
-    <Carousel infiniteLoop autoPlay>
+    <Carousel infiniteLoop autoPlay showThumbs={false}>
       {slides.map((slide) => {
         return (
+          
           <Box
-            key={slides.id}
+            key={slide.id}
             width="80%"
             // margin="auto"
             height="auto"
