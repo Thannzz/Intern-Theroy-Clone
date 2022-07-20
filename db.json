@@ -1,0 +1,82 @@
+{
+    "Marketing":[{
+        "id":1,
+        "Stipend":"Learn Industry-Demanded Skills",
+        "Image":"https://assets.interntheory.com/creative/logo.png",
+        "Job":"Develop Your Skillset",
+        "CompanyName":"Online Skill Development Programs",
+        "CourseType":"Taught by Industry Experts Internship",
+        "Roles":"Certified Courses",
+        "Location":"Guaranteed Internship Opportunities",
+        "Time":"4-6 Weeks",
+        "DescriptionURL":"https://www.interntheory.com/courses?utm_source=internshipslist&utm_medium=webpage",
+        "Button":"UPGRADE SKILLS"
+        },
+        {
+            "id":2,
+            "Stipend":"None",
+            "Image":"https://assets.interntheory.com/uploads/company/companylogos/e1822db470e60d090affd0956d743cb0e7cdf113/f9d920bb5121b4f9bd050ef51143a49c83601f73com.png",
+            "Job":"Marketing Volunteer",
+            "CompanyName":"Atma",
+            "CourseType":"Part Time Internship",
+            "Roles":"Marketing",
+            "Location":"Mumbai",
+            "Time":"3 weeks left",
+            "DescriptionURL":"https://www.interntheory.com/internship/marketing-internship-at-atma-r8hlk",
+            "Button":"VIEW AND APPLY"
+        },
+        {
+            "id":3,
+            "Stipend":"5000 - 8000 per month",
+            "Image":"https://assets.interntheory.com/uploads/company/logos/74cde4c615291afa152cd7d20c02be218665f1d8.jpg",
+            "Job":"Sales and Marketing",
+            "CompanyName":"R J Gala and Associates",
+            "CourseType":"Full Time Internship",
+            "Roles":"Marketing",
+            "Location":"Mumbai",
+            "Time":"3 weeks left",
+            "DescriptionURL":"",
+            "Button":""
+        },
+        {
+        "id":4,
+            "Stipend":"100 per sale",
+            "Image":"https://assets.interntheory.com/uploads/company/logos/fff28c12e9cec25407a49bc223168438ac2ee7d9.jpg",
+            "Job":"Sales and Marketing",
+            "CompanyName":"Nerdy Turtlez",
+            "CourseType":"Work From Home Internship",
+            "Roles":"Sales And Marketing",
+            "Location":"Mumbai,Bangalore,Kolkata ,\n...MORE",
+            "Time":"3 weeks left",
+            "DescriptionURL":"https://www.interntheory.com/internship/marketing-internship-at-nerdy-turtlez-hkx46",
+            "Button":"VIEW AND APPLY"
+            },
+            {
+                "id":5,
+                "Stipend":"3000 - 10000 per month",
+                "Image":"https://assets.interntheory.com/uploads/company/companylogos/62362fbf882221470f099d8d0a119df93ce19831/7e34b7356b30b3696d14fcab94c6e8989a42fd69com.jpg",
+                "Job":"Marketing Ambassador  - Work from Home",
+                "CompanyName":"Laugh Out Loud Ventures",
+                "CourseType":"Work From Home Internship",
+                "Roles":"Marketing",
+                "Location":"Bangalore,Chennai,Delhi ,\n...MORE",
+                "Time":"2 weeks left",
+                "DescriptionURL":"https://www.interntheory.com/internship/marketing-internship-at-laugh-out-loud-ventures-celg1",
+                "Button":"VIEW AND APPLY"
+            },
+            {
+                "id":6,
+                "Stipend":"2500 per month",
+                "Image":"https://assets.interntheory.com/uploads/company/logos/cf8bd45dd2e6a22fa207ef5d85638f803995a2d0.jpg",
+                "Job":"campus ambasador ",
+                "CompanyName":"Drone Destination",
+                "CourseType":"Work From Home Internship",
+                "Roles":"Marketing",
+                "Location":"Mumbai",
+                "Time":"1 week",
+                "DescriptionURL":"https://www.interntheory.com/internship/marketing-internship-at-drone-destination-8maf7",
+                "Button":"VIEW AND APPLY"}]
+
+
+}
+
