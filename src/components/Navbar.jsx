@@ -9,12 +9,14 @@ const Navbar = () => {
   return (
     <div
       style={{
-        marginTop: "15px",
         display: "flex",
         width: "100%",
         height: "50px",
         // border: "1px solid red",
         justifyContent: "space-between",
+        // position: "fixed",
+        // zIndex: 999,
+        // backgroundColor: "white",
       }}
     >
       <Box display="flex">
