@@ -2,7 +2,7 @@ import { Box, Heading, HStack, Image, Stack } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ProductListing = ({ data, name, route, get }) => {
+const ProductListing = ({ data, name, route }) => {
   console.log(name, route);
 
   return (

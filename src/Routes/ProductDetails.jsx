@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import DescriptionLayout from "../components/DescriptionLayout";
 
-const ProductDetails = ({ get }) => {
-//   console.log(get);
+const ProductDetails = ({ route, get }) => {
+  //   console.log(get);
   const [data, setData] = useState([]);
   const params = useParams();
   const getData = () => {
@@ -24,11 +24,11 @@ const ProductDetails = ({ get }) => {
   useEffect(() => {
     getData();
   }, []);
-//   console.log(data);
+  //   console.log(data);
   return (
     <>
       <Navbar />
-      <DescriptionLayout data={data} />
+      <DescriptionLayout route={route} data={data} />
       <Footer />
     </>
   );

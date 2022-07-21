@@ -26,27 +26,27 @@ const AllRoutes = () => {
         <Route path="/intern" element={<Intern />} />
         <Route
           path="/bussiness/:id"
-          element={<ProductDetails get={"Business"} />}
+          element={<ProductDetails route={"bussiness"} get={"Business"} />}
         />
         <Route
           path="/marketing/:id"
-          element={<ProductDetails get={"Marketing"} />}
+          element={<ProductDetails route={"marketing"} get={"Marketing"} />}
         />
         <Route
           path="/graphics/:id"
-          element={<ProductDetails get={"Graphics"} />}
+          element={<ProductDetails get={"Graphics"} route={"graphics"} />}
         />
         <Route
           path="/finance/:id"
-          element={<ProductDetails get={"Finance"} />}
+          element={<ProductDetails route={"finance"} get={"Finance"} />}
         />
         <Route
           path="/human/:id"
-          element={<ProductDetails get={"Human"} />}
+          element={<ProductDetails route={"human"} get={"Human"} />}
         />
         <Route
           path="/intern/:id"
-          element={<ProductDetails get={"All"} />}
+          element={<ProductDetails route={"intern"} get={"All"} />}
         />
       </Routes>
     </>
