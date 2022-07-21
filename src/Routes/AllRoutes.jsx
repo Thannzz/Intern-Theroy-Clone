@@ -9,6 +9,7 @@ import Home from "./Home";
 import Human from "./Human";
 import Intern from "./Intern";
 import { Marketing } from "./Marketing";
+import ProductDetails from "./ProductDetails";
 
 const AllRoutes = () => {
   return (
@@ -23,6 +24,30 @@ const AllRoutes = () => {
         <Route path="/human" element={<Human />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/intern" element={<Intern />} />
+        <Route
+          path="/bussiness/:id"
+          element={<ProductDetails get={"Business"} />}
+        />
+        <Route
+          path="/marketing/:id"
+          element={<ProductDetails get={"Marketing"} />}
+        />
+        <Route
+          path="/graphics/:id"
+          element={<ProductDetails get={"Graphics"} />}
+        />
+        <Route
+          path="/finance/:id"
+          element={<ProductDetails get={"Finance"} />}
+        />
+        <Route
+          path="/human/:id"
+          element={<ProductDetails get={"Human"} />}
+        />
+        <Route
+          path="/intern/:id"
+          element={<ProductDetails get={"All"} />}
+        />
       </Routes>
     </>
   );

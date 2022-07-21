@@ -1,9 +1,35 @@
-import React from 'react'
+import { Box } from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import ProductListing from "../components/ProductListing";
+import { getFinanceData } from "../Api";
 
-const Finance = () => {
+export const Finance = () => {
+  const [data, setData] = useState([]);
+
+  const handleGetData = () => {
+    getFinanceData()
+      .then((res) => {
+        // console.log(res.data);
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(() => {
+    handleGetData();
+  }, []);
+  console.log(data);
+
   return (
-    <div>Finance</div>
-  )
-}
+    <Box>
+      <Navbar />
+      <ProductListing route={"finance"} name={"FINANCE"} data={data} />
+      <Footer />
+    </Box>
+  );
+};
 
-export default Finance
+export default Finance;
