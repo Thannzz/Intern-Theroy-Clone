@@ -26,7 +26,11 @@ export const Marketing = () => {
   return (
     <Box>
       <Navbar />
-      <ProductListing name={"MARKETING INTERNSHIP"} data={data} />
+      <ProductListing
+        route={"marketing"}
+        name={"MARKETING INTERNSHIP"}
+        data={data}
+      />
       <Footer />
     </Box>
   );

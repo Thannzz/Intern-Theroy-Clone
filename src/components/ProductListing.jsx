@@ -1,7 +1,10 @@
 import { Box, Heading, HStack, Image, Stack } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const ProductListing = ({ data, name }) => {
+const ProductListing = ({ data, name, route, get }) => {
+  console.log(name, route);
+
   return (
     <Box
       backgroundColor="rgb(248, 248, 248)"
@@ -12,7 +15,7 @@ const ProductListing = ({ data, name }) => {
       <Box
         width="30%"
         height="500px"
-        border="1px solid red"
+        // border="1px solid red"
         display="flex"
         justifyContent="flex-end"
       >
@@ -48,7 +51,7 @@ const ProductListing = ({ data, name }) => {
             height="auto"
             padding="10px"
             margin="auto"
-            border="1px solid blue"
+            // border="1px solid blue"
             borderBottom="2px grey dashed"
             display="flex"
           >
@@ -57,7 +60,7 @@ const ProductListing = ({ data, name }) => {
               margin="0"
               width="20%"
               height="100%"
-              border="1px solid red"
+              // border="1px solid red"
               justifyContent="center"
             >
               <Image
@@ -70,7 +73,7 @@ const ProductListing = ({ data, name }) => {
                 src={el.Image}
               />
             </Box>
-            <Box width="60%" height="100%" border="1px solid red">
+            <Box width="60%" height="100%">
               <Box textAlign="left">
                 <Heading
                   as="h6"
@@ -142,7 +145,7 @@ const ProductListing = ({ data, name }) => {
               textAlign="right"
               width="20%"
               height="100%"
-              border="1px solid red"
+              // border="1px solid red"
             >
               <Stack justifyContent="space-between">
                 <p>{el.Time}</p>
@@ -154,7 +157,9 @@ const ProductListing = ({ data, name }) => {
                     fontWeight: "500",
                   }}
                 >
-                  {el.Button}
+                  <Link to={`/${route}/${el.id}`}>
+                    {el.Button}
+                  </Link>
                 </span>
               </Stack>
             </Box>
