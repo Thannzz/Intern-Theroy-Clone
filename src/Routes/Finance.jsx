@@ -21,7 +21,7 @@ export const Finance = () => {
   useEffect(() => {
     handleGetData();
   }, []);
-  console.log(data);
+  // console.log(data);
 
   return (
     <Box>

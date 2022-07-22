@@ -403,7 +403,99 @@
         "DescriptionURL":"https://www.interntheory.com/internship/fundraising-internship-at-atma-oqvt5",
         "Button":"VIEW AND APPLY"
     }
+],
+"Courses":
+[
+    {
+        "id":1,
+        "Title":"IT Starter Pack (4 Courses)",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/it.jpg",
+        "Description":"Learn the most demanded skills in the IT industry today. Sig ...",
+        "OriginalPrice":"₹ 32999",
+        "OfferPrice":"₹ 15999",
+        "EMI":"EMI Starting at ₹ 915/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":2,
+        "Title":"Digital Marketing Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/digital-marketing-course.png",
+        "Description":"Learn the art of digital marketing. Sign up for this online  ...",
+        "OriginalPrice":"₹ 11999",
+        "OfferPrice":"₹ 5999",
+        "EMI":"EMI Starting at ₹ 343/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":3,
+        "Title":"Data Analytics With R Programming Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/data-analytics-r-programming-course.png",
+        "Description":"Learn data science online. Join this online data analytics c ...",
+        "OriginalPrice":"₹ 11999",
+        "OfferPrice":"₹ 5999",
+        "EMI":"EMI Starting at ₹ 343/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":4,
+        "Title":"Web Development Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/web-development-course.png",
+        "Description":"Learn the art of web design and web development. Join this o ...",
+        "OriginalPrice":"₹ 7999",
+        "OfferPrice":"₹ 3999",
+        "EMI":"EMI Starting at ₹ 229/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":5,
+        "Title":"Tally + GST Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/tally-gst-course.png",
+        "Description":"Sign up for this online tally and gst course and learn how t ...",
+        "OriginalPrice":"₹ 7999",
+        "OfferPrice":"₹ 3999",
+        "EMI":"EMI Starting at ₹ 229/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":6,
+        "Title":"Android App Development Using Kotlin Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/android-app-development-kotlin-course.png",
+        "Description":"Learn the art of android app design and web development. Joi ...",
+        "OriginalPrice":"₹ 7999",
+        "OfferPrice":"₹ 3999",
+        "EMI":"EMI Starting at ₹ 229/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":7,
+        "Title":"Advanced Excel Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png",
+        "Description":"Master MS Excel. Take the online ms excel course and learn t ...",
+        "OriginalPrice":"₹ 5999",
+        "OfferPrice":"₹ 2999",
+        "EMI":"EMI Starting at ₹ 172/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    },
+    {
+        "id":8,
+        "Title":"R Programming Course",
+        "Image":"https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png",
+        "Description":"Learn r programming online. Sign up for this online r progra ...",
+        "OriginalPrice":"₹ 5999",
+        "OfferPrice":"₹ 2999",
+        "EMI":"EMI Starting at ₹ 172/month",
+        "Know":"KNOW MORE",
+        "Add":"ADD TO CART"
+    }
 ]
+
 
 
 

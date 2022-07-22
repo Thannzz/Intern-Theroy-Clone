@@ -2,6 +2,8 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Bussiness from "./Bussiness";
 import Content from "./Content";
+import CourseDetails from "./CourseDetails";
+import Courses from "./Courses";
 import Engineering from "./Engineering";
 import Finance from "./Finance";
 import Graphics from "./Graphics";
@@ -24,6 +26,8 @@ const AllRoutes = () => {
         <Route path="/human" element={<Human />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/intern" element={<Intern />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:id" element={<CourseDetails />} />
         <Route
           path="/bussiness/:id"
           element={<ProductDetails route={"bussiness"} get={"Business"} />}
