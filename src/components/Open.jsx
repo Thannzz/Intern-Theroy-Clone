@@ -9,9 +9,23 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Button,
-  Input,
+  Image,
+  Box,
+  HStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { Icon } from "@chakra-ui/react";
+import { HiPhone } from "react-icons/hi";
+import { BsCurrencyDollar } from "react-icons/bs";
+import { IoBag } from "react-icons/io5";
+import {
+  MdLogout,
+  MdBook,
+  MdDashboard,
+  MdPerson,
+  MdFormatAlignJustify,
+} from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Open = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,18 +53,88 @@ const Open = () => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>
+            <Image
+              style={{ marginLeft: "25px", width: "80px", height: "45px" }}
+              src="https://assets.interntheory.com/creative/logo.png"
+              alt="home"
+            />
+          </DrawerHeader>
 
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={MdDashboard} /> <p>Dashboard</p>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={MdPerson} /> <p>Profile</p>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={MdFormatAlignJustify} />{" "}
+              <Link to="/intern">
+                <p>Internship</p>
+              </Link>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={IoBag} /> <p>Jobs</p>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={MdBook} />
+              <Link to="/courses">
+                <p>Courses</p>
+              </Link>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={BsCurrencyDollar} />{" "}
+              <p>Transition</p>
+            </HStack>
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={HiPhone} /> <p>Contact Us</p>
+            </HStack>
+            <hr />
+            <HStack
+              _hover={{ backgroundColor: "lightgray" }}
+              padding="1rem"
+              // border="1px solid red"
+              fontWeight="bold"
+            >
+              <Icon w="6" h="6" mr="1rem" as={MdLogout} /> <p>Logout</p>
+            </HStack>
           </DrawerBody>
-
-          <DrawerFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
-              Cancel
-            </Button>
-            <Button colorScheme="blue">Save</Button>
-          </DrawerFooter>
         </DrawerContent>
       </Drawer>
     </>

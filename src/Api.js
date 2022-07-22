@@ -15,14 +15,6 @@ export function getBusinessData() {
   });
 }
 
-// export function GetBusinessParams() {
-//   const params = useParams();
-//   return axios({
-//     url: `http://localhost:8080/Business/${params.id}`,
-//     method: "GET",
-//   });
-// }
-
 export function getGraphicsData() {
   return axios({
     url: "http://localhost:8080/Graphics",
@@ -47,6 +39,13 @@ export function getHumanData() {
 export function getAllData() {
   return axios({
     url: "http://localhost:8080/All",
+    method: "GET",
+  });
+}
+
+export function getCourses() {
+  return axios({
+    url: "http://localhost:8080/Courses",
     method: "GET",
   });
 }

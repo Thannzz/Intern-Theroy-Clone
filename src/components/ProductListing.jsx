@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProductListing = ({ data, name, route }) => {
-  console.log(name, route);
+  // console.log(name, route);
 
   return (
     <Box
