@@ -1,8 +1,20 @@
 import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
+import { useToast } from "@chakra-ui/react";
 
 const DescriptionLayout = ({ data }) => {
-  console.log(data);
+  // console.log(data);
+  const toast = useToast();
+  const handleApply = () => {
+    toast({
+      title: `Sucess`,
+      description: "Your Apllication is sucessfully submitted",
+      status: "info",
+      position: "top",
+      duration: 5000,
+      isClosable: true,
+    });
+  };
 
   return (
     <Box
@@ -116,7 +128,7 @@ const DescriptionLayout = ({ data }) => {
           padding="10px"
           width="100%"
           height="auto"
-          border="1px solid red"
+          // border="1px solid red"
         >
           <Box borderBottom="2px grey dashed" padding="2rem">
             <p
@@ -459,14 +471,24 @@ const DescriptionLayout = ({ data }) => {
               Maharashtra, India., mumbai, 400013.
             </p>
           </Box>
-          <Box display="flex" width="100%" height="50px" border="1px solid red">
+          <Box display="flex" width="100%" height="50px">
             <Button
               boxShadow="0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 3px 1px -2px rgb(0 0 0 / 12%);"
               colorScheme="red"
               size="md"
               verticalAlign="middle"
+              onClick={handleApply}
             >
               APPLY
+            </Button>
+            <Button
+              style={{ color: "#087CDD" }}
+              colorScheme="blue"
+              variant="ghost"
+              size="md"
+              margin="0"
+            >
+              Go Back
             </Button>
           </Box>
         </Box>
