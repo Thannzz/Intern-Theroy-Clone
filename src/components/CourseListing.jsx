@@ -3,8 +3,25 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 const CourseListing = ({ data }) => {
-  // const params = useParams()
-  // console.log(data, 1);
+  const handleAddtoCart = (data) => {
+    var cartItem = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cartItem.length === 0) {
+      cartItem.push(data);
+      localStorage.setItem("cart", JSON.stringify(cartItem));
+    } else {
+      let count = 0;
+      for (let i = 0; i < cartItem.length; i++) {
+        if (cartItem[i].Title === data.Title) {
+          count++;
+          return;
+        }
+      }
+      if (count === 0) {
+        cartItem.push(data);
+        localStorage.setItem("cart", JSON.stringify(cartItem));
+      }
+    }
+  };
   return (
     <Box backgroundColor="rgb(248, 248, 248)" mb="1rem" w="100%" h="auto">
       <Box
@@ -123,8 +140,9 @@ const CourseListing = ({ data }) => {
                     verticalAlign="middle"
                     margin="0"
                     marginRight="-20px"
+                    onClick={() => handleAddtoCart(el)}
                   >
-                    {el.Add}
+                    <Link to="/cart">{el.Add} </Link>
                   </Button>
                 </Box>
               </GridItem>

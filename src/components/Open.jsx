@@ -104,7 +104,8 @@ const Open = () => {
               fontWeight="bold"
             >
               <Icon w="6" h="6" mr="1rem" as={MdBook} />
-              <Link to="/courses">
+              <Link to="/courses"
+              >
                 <p>Courses</p>
               </Link>
             </HStack>

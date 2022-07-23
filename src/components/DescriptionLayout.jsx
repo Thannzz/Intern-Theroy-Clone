@@ -1,12 +1,8 @@
 import { Box, Button, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
 
-const DescriptionLayout = ({ data, route }) => {
-  // console.log(route, data);
-  const handlepost = () => {
-    console.log(data,1);
-  };
+const DescriptionLayout = ({ data }) => {
+  console.log(data);
 
   return (
     <Box
@@ -72,7 +68,7 @@ const DescriptionLayout = ({ data, route }) => {
               lineHeight="1.6"
               letterSpacing="0.0075em"
               color="#3C4858"
-              textTransform="uppercase"
+              textTranform="capitalize"
             >
               {data.Job}
             </Heading>
@@ -84,7 +80,6 @@ const DescriptionLayout = ({ data, route }) => {
                 letterSpacing: "0.01071em",
                 fontSize: "0.875rem",
                 marginLeft: "10px",
-                textTransform: "uppercase",
               }}
             >
               {data.CompanyName}
@@ -121,7 +116,7 @@ const DescriptionLayout = ({ data, route }) => {
           padding="10px"
           width="100%"
           height="auto"
-          // border="1px solid red"
+          border="1px solid red"
         >
           <Box borderBottom="2px grey dashed" padding="2rem">
             <p
@@ -464,29 +459,14 @@ const DescriptionLayout = ({ data, route }) => {
               Maharashtra, India., mumbai, 400013.
             </p>
           </Box>
-          <Box
-            flexDir="row-reverse"
-            display="flex"
-            width="100%"
-            height="50px"
-            paddingRight="2rem"
-            // border="1px solid red"
-          >
+          <Box display="flex" width="100%" height="50px" border="1px solid red">
             <Button
-              onClick={() => handlepost(data)}
               boxShadow="0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 3px 1px -2px rgb(0 0 0 / 12%);"
               colorScheme="red"
               size="md"
               verticalAlign="middle"
             >
               APPLY
-            </Button>
-            <Button
-              style={{ color: "#087CDD" }}
-              colorScheme="blue"
-              variant="ghost"
-            >
-              <Link to={`/${route}`}>BACK TO INTERNSHIP</Link>
             </Button>
           </Box>
         </Box>
