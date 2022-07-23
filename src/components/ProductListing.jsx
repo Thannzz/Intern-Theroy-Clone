@@ -157,9 +157,7 @@ const ProductListing = ({ data, name, route }) => {
                     fontWeight: "500",
                   }}
                 >
-                  <Link to={`/${route}/${el.id}`}>
-                    {el.Button}
-                  </Link>
+                  <Link to={`/${route}/${el.id}`}>{el.Button}</Link>
                 </span>
               </Stack>
             </Box>

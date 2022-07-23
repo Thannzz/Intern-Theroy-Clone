@@ -7,6 +7,9 @@ import Navbar from "../components/Navbar";
 import Product from "../components/Product";
 import Search from "../components/Search";
 
+if (localStorage.getItem("cart") === null) {
+  localStorage.setItem("cart", JSON.stringify([]));
+}
 const Home = () => {
   return (
     <div>

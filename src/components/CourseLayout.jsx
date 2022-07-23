@@ -8,8 +8,30 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+
 export const CourseLayout = ({ data }) => {
-  console.log(data);
+  //   console.log(data);
+
+  const handleAddtoCart = (data) => {
+    var cartItem = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cartItem.length === 0) {
+      cartItem.push(data);
+      localStorage.setItem("cart", JSON.stringify(cartItem));
+    } else {
+      let count = 0;
+      for (let i = 0; i < cartItem.length; i++) {
+        if (cartItem[i].Title === data.Title) {
+          count++;
+          return;
+        }
+      }
+      if (count === 0) {
+        cartItem.push(data);
+        localStorage.setItem("cart", JSON.stringify(cartItem));
+      }
+    }
+  };
   return (
     <>
       <Image
@@ -284,8 +306,10 @@ export const CourseLayout = ({ data }) => {
             w="80%"
             ml="10%"
             mb="10%"
+            onClick={() => handleAddtoCart(data)}
           >
-            ADD TO CART
+            
+            <Link to="/cart">ADD TO CART</Link>
           </Button>
         </Box>
       </Box>

@@ -413,6 +413,7 @@
         "Description":"Learn the most demanded skills in the IT industry today. Sig ...",
         "OriginalPrice":"₹ 32999",
         "OfferPrice":"₹ 15999",
+        "Price":15999,
         "EMI":"EMI Starting at ₹ 915/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
@@ -424,6 +425,7 @@
         "Description":"Learn the art of digital marketing. Sign up for this online  ...",
         "OriginalPrice":"₹ 11999",
         "OfferPrice":"₹ 5999",
+        "Price":5999,
         "EMI":"EMI Starting at ₹ 343/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
@@ -435,6 +437,7 @@
         "Description":"Learn data science online. Join this online data analytics c ...",
         "OriginalPrice":"₹ 11999",
         "OfferPrice":"₹ 5999",
+        "Price":5999,
         "EMI":"EMI Starting at ₹ 343/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
@@ -446,6 +449,7 @@
         "Description":"Learn the art of web design and web development. Join this o ...",
         "OriginalPrice":"₹ 7999",
         "OfferPrice":"₹ 3999",
+        "Price":3999,
         "EMI":"EMI Starting at ₹ 229/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
@@ -457,6 +461,7 @@
         "Description":"Sign up for this online tally and gst course and learn how t ...",
         "OriginalPrice":"₹ 7999",
         "OfferPrice":"₹ 3999",
+        "Price":3999,
         "EMI":"EMI Starting at ₹ 229/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
@@ -468,12 +473,14 @@
         "Description":"Learn the art of android app design and web development. Joi ...",
         "OriginalPrice":"₹ 7999",
         "OfferPrice":"₹ 3999",
+        "Price":3999,
         "EMI":"EMI Starting at ₹ 229/month",
         "Know":"KNOW MORE",
         "Add":"ADD TO CART"
     },
     {
         "id":7,
+        "Price":2999,
         "Title":"Advanced Excel Course",
         "Image":"https://assets.interntheory.com/creative/courses/thumbnails/advanced-excel-course.png",
         "Description":"Master MS Excel. Take the online ms excel course and learn t ...",
@@ -485,6 +492,7 @@
     },
     {
         "id":8,
+        "Price":2999,
         "Title":"R Programming Course",
         "Image":"https://assets.interntheory.com/creative/courses/thumbnails/r-programming-course.png",
         "Description":"Learn r programming online. Sign up for this online r progra ...",
