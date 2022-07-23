@@ -1,9 +1,11 @@
 import {
   Box,
+  Button,
   Flex,
   getToastPlacement,
   Heading,
   Image,
+  Input,
   textDecoration,
   Toast,
 } from "@chakra-ui/react";
@@ -11,25 +13,46 @@ import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Pay from "../components/Pay";
 
 const Cart = () => {
   var cartItems = JSON.parse(localStorage.getItem("cart"));
+  const [data, setdata] = useState(cartItems);
+  const [amount, setAmount] = useState(0);
   const [total, setTotal] = useState(0);
   const [cgst, setcgst] = useState(0);
   const getTotal = () => {
+    setAmount(0);
     {
-      cartItems.map((el) => setTotal((prev) => prev + el.Price));
+      data.map((el) => setAmount((prev) => prev + el.Price));
     }
   };
   useEffect(() => {
     getTotal();
-  }, []);
+  }, [data]);
   useEffect(() => {
-    setcgst((total * 9) / 100);
-  }, []);
-  console.log(cgst);
+    setcgst(amount * 0.09);
+    setTotal(amount + 2 * cgst);
+  }, [data, amount]);
+
+  const handleCLear = () => {
+    setdata([]);
+    setTotal(0);
+    setAmount(0);
+    setcgst(0);
+    localStorage.clear();
+  };
+
+  const handleRemove = (el) => {
+    cartItems.splice(el, 1);
+    console.log(cartItems);
+    localStorage.setItem("cart", JSON.stringify(cartItems));
+    setdata(cartItems);
+  };
+
+  // console.log(Math.round(cgst));
   // console.log(total);
-  // console.log(cartItems);
+  // console.log(cartItems[0].id);
   return (
     <>
       <Navbar />
@@ -37,7 +60,8 @@ const Cart = () => {
         backgroundColor="rgb(248, 248, 248)"
         w="100%"
         h="auto"
-        border="1px solid red"
+        p="2rem"
+        // border="1px solid red"
       >
         <Box
           w="70%"
@@ -49,15 +73,23 @@ const Cart = () => {
           display="flex"
           mb="2rem"
         >
-          <Box w="70%" h="100%" borderRight="1px solid grey">
-            <p>Cart</p>
-            {cartItems.map((el) => (
+          <Box w="70%" h="100%">
+            <Heading textAlign="left" p="1rem" size="md" fontWeight="medium">
+              Cart
+            </Heading>
+
+            {data.map((el) => (
               <Box
                 borderBottom="1px dashed gray"
                 display="flex"
                 padding="1.5rem"
               >
-                <Box w="80%" h="100%" display="flex">
+                <Box
+                  onClick={() => handleRemove(el)}
+                  w="80%"
+                  h="100%"
+                  display="flex"
+                >
                   <AiFillCloseCircle size="25px" color="red" />
                   <Image
                     ml="1rem"
@@ -100,11 +132,60 @@ const Cart = () => {
                 </Box>
               </Box>
             ))}
+            <Flex padding="1rem" flexDir="row-reverse">
+              <Button
+                boxShadow="0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 3px 1px -2px rgb(0 0 0 / 12%);"
+                colorScheme="red"
+                size="sm"
+                verticalAlign="middle"
+                m="10px 0 10px 0px"
+                onClick={() => handleCLear(cartItems)}
+              >
+                EMPTY CART
+              </Button>
+            </Flex>
           </Box>
-          <Box w="30%" padding="2rem" h="100%" border="1px solid red">
+          <Box w="30%" borderLeft="1px solid gray" padding="2rem" h="100%">
             <Flex borderBottom="1px solid grey" justifyContent="space-between">
               <Box>Amount</Box>
-              <Box>₹{total}</Box>
+              <Box>₹{amount}</Box>
+            </Flex>
+            <Flex
+              mt="1rem"
+              borderBottom="1px solid grey"
+              justifyContent="space-between"
+            >
+              <Box>CGST</Box>
+              <Box>₹ {Math.round(cgst)}</Box>
+            </Flex>
+            <Flex
+              mt="1rem"
+              borderBottom="1px solid grey"
+              justifyContent="space-between"
+            >
+              <Box>SGST</Box>
+              <Box>₹ {Math.round(cgst)}</Box>
+            </Flex>
+            <Flex mt="2rem" justifyContent="space-between">
+              <Box fontWeight="bold">Total </Box>
+              <Box fontWeight="bold">₹ {Math.round(total)}</Box>
+            </Flex>
+            <Flex mt="2rem">
+              <Input w="60%" placeholder="Coupon Code" variant="flushed" />
+              <Button
+                boxShadow="0px 1px 5px 0px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 3px 1px -2px rgb(0 0 0 / 12%);"
+                colorScheme="red"
+                size="sm"
+                verticalAlign="middle"
+                m="10px 0 10px 0px"
+                marginRight="-20px"
+                w="30%"
+              >
+                G0
+              </Button>
+            </Flex>
+            <Flex mt="0.5rem">
+              <Pay />
             </Flex>
           </Box>
         </Box>
